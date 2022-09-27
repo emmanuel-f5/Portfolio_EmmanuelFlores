@@ -1,0 +1,14 @@
+.row {
+    padding: 20px;
+    background: linear-gradient(90deg, #2c5499, #008a8f);
+}
+
+#fotodeperfil {
+    border-radius: 100%;
+}
+
+@media(max-width: 575px) {
+    #fotodeperfil {
+        width: 25%;
+    }
+}
