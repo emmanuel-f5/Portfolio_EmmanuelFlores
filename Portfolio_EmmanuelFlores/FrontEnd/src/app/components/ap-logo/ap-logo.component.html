@@ -4,10 +4,11 @@
             <img src="../../../assets/AP_logo.png" alt="Logo de Argentina Programa" id="logoAP">
         </div>
         <div>
-            <a href=""><img src="../../../assets/linkedin.png" alt="Ir a Linkedin"></a>
-            <a href=""><img src="../../../assets/Telegram_Logo.png" alt=""></a>
-            <a href=""><img src="../../../assets/mail_icon.png" alt=""></a>
-            <button type="button" class="btn btn-outline-light" (click)="login()">Ingresar</button>
+            <a href="https://www.linkedin.com/in/emmanuel-jaime-flores-izquierdo-94382b24a/" target="_blank" rel="noopener noreferrer"><img src="../../../assets/linkedin.png" alt="Ir a Linkedin"></a>
+            <a href="https://t.me/flores_emmanuel" target="_blank" rel="noopener noreferrer"><img src="../../../assets/Telegram_Logo.png" alt="Enviar un mensaje de Telegram"></a>
+            <a href="mailto:flores.emmanuel@gmail.com" rel="noopener noreferrer"><img src="../../../assets/mail_icon.png" alt="Enviar un email"></a>
+            <button type="button" class="btn btn-outline-dark" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+            <button type="button" class="btn btn-outline-dark" (click)="onLogout()" *ngIf="isLogged">Salir</button>
         </div>
     </div>
 </div>
