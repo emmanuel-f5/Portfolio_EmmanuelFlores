@@ -1,14 +1,23 @@
 <div class="row">
     <h1>Experiencia laboral</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+            Nueva experiencia
+        </button>
+    </div>
+
     <div class="col-lg-1"></div>
     <div class="col-lg-11">
-        <ul>
-            <li><h2>Reparador de PC</h2> - <h3>(años)</h3></li>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, odit tempore? Officia dolore eum itaque quisquam pariatur, deleniti provident a sint at commodi nesciunt atque ipsum ex tempora necessitatibus repudiandae.</p>
-        </ul>
-        <ul>
-            <li><h2>Asistente en la Cámara de Diputados de la Provincia de Santa Fe</h2> - <h3>(años)</h3></li>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, odit tempore? Officia dolore eum itaque quisquam pariatur, deleniti provident a sint at commodi nesciunt atque ipsum ex tempora necessitatibus repudiandae.</p>
-        </ul>
-    </div>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Experiencia of experiencia">
+                    <td><h2>{{Experiencia.nombreExp}}></h2></td>
+                    <td>{{Experiencia.descripcionExp}}</td>
+                    <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}"><i class="bi bi-pencil"></i>Editar</button></td>
+                    <td *ngIf="isLogged"><button class="btn btn-danger" (clic)="delete(Experiencia.id)"><i class="bi bi-trash"></i>Borrar</button></td>
+                </tr>
+            </tbody>
+    
+        </table>
+    </div>    
 </div>
