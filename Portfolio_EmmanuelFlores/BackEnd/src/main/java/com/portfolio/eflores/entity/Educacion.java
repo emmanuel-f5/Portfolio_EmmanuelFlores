@@ -13,8 +13,6 @@ public class Educacion {
     private String nombreEdu;
     private String descripcionEdu;
 
-    
-    //Constructores
     public Educacion() {
     }
 
@@ -22,8 +20,6 @@ public class Educacion {
         this.nombreEdu = nombreEdu;
         this.descripcionEdu = descripcionEdu;
     }
-    
-    //Getters y Setters
 
     public int getId() {
         return id;

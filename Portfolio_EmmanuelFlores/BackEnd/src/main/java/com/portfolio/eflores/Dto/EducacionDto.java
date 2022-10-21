@@ -2,36 +2,33 @@ package com.portfolio.eflores.Dto;
 
 import javax.validation.constraints.NotBlank;
 
-
-public class EducacionDto {
+public class EducacionDto{
     @NotBlank
     private String nombreEdu;
     @NotBlank
     private String descripcionEdu;
 
-    public EducacionDto() {
+    public EducacionDto(){
     }
 
-    //Constructor
-    public EducacionDto(String nombreEdu, String descripcionEdu) {
+    public EducacionDto(String nombreEdu, String descripcionEdu){
         this.nombreEdu = nombreEdu;
         this.descripcionEdu = descripcionEdu;
     }
 
-    //Getters y Setters
-    public String getNombreEdu() {
+    public String getNombreEdu(){
         return nombreEdu;
     }
 
-    public void setNombreEdu(String nombreEdu) {
+    public void setNombreEdu(String nombreEdu){
         this.nombreEdu = nombreEdu;
     }
 
-    public String getDescripcionEdu() {
+    public String getDescripcionEdu(){
         return descripcionEdu;
     }
 
-    public void setDescripcionEdu(String descripcionEdu) {
+    public void setDescripcionEdu(String descripcionEdu){
         this.descripcionEdu = descripcionEdu;
     }
     

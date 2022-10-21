@@ -1,26 +1,17 @@
 <div class="row">
-    <h1>Hard skills</h1>
-    <div class="text-center col-sm-3 col-md-3 col-lg-3">
-        <circle-progress
-            [percent]="85"
-            [radius]="100"
-            [showUnits]="false"
-            [title]="'Música'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'"
-            [animation]="true"
-            [animationDuration]="400">
-        </circle-progress>
+    <h1>Hard & Soft Skills</h1>
+
+    <div class="col-lg-2">
+        <button type="button" routerLink="/nuevaskills" class="btn btn-dark" *ngIf="isLogged"> Nueva Skill</button>
     </div>
-    <div class="text-center col-sm-3 col-md-3 col-lg-3">
+
+    <div class="text-center col-sm-3 col-md-3 col-lg-3" *ngFor="let skills of skills">
         <circle-progress
-            [percent]="85"
+            [percent]="(skills.porcentaje)"
             [radius]="100"
             [showUnits]="false"
-            [title]="'Música'"
+            [title]="(skills.nombreS)"
+            [showTitle]="true"
             [showSubtitle]="false"
             [outerStrokeWidth]="16"
             [innerStrokeWidth]="8"
@@ -29,96 +20,8 @@
             [animation]="true"
             [animationDuration]="400">
         </circle-progress>
-    </div>
-    <div class="text-center col-sm-3 col-md-3 col-lg-3">
-        <circle-progress
-            [percent]="85"
-            [radius]="100"
-            [showUnits]="false"
-            [title]="'Música'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'"
-            [animation]="true"
-            [animationDuration]="400">
-        </circle-progress>
-    </div>
-    <div class="text-center col-sm-3 col-md-3 col-lg-3">
-        <circle-progress
-            [percent]="85"
-            [radius]="100"
-            [showUnits]="false"
-            [title]="'Música'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'"
-            [animation]="true"
-            [animationDuration]="400">
-        </circle-progress>
-    </div>
-    <h1>Soft skills</h1>
-    <div class="text-center col-sm-3 col-md-3 col-lg-3">
-        <circle-progress
-            [percent]="85"
-            [radius]="100"
-            [showUnits]="false"
-            [title]="'Música'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'"
-            [animation]="true"
-            [animationDuration]="400">
-        </circle-progress>
-    </div>
-    <div class="text-center col-sm-3 col-md-3 col-lg-3">
-        <circle-progress
-            [percent]="85"
-            [radius]="100"
-            [showUnits]="false"
-            [title]="'Música'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'"
-            [animation]="true"
-            [animationDuration]="400">
-        </circle-progress>
-    </div>
-    <div class="text-center col-sm-3 col-md-3 col-lg-3">
-        <circle-progress
-            [percent]="85"
-            [radius]="100"
-            [showUnits]="false"
-            [title]="'Música'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'"
-            [animation]="true"
-            [animationDuration]="400">
-        </circle-progress>
-    </div>
-    <div class="text-center col-sm-3 col-md-3 col-lg-3">
-        <circle-progress
-            [percent]="85"
-            [radius]="100"
-            [showUnits]="false"
-            [title]="'Música'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'"
-            [animation]="true"
-            [animationDuration]="400">
-        </circle-progress>
+
+        <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editskills/{{skills.id}}"><i class="bi bi-pencil"></i>Editar</button></td>
+        <td *ngIf="isLogged"><button class="btn btn-danger" (clic)="delete(skills.id)"><i class="bi bi-trash"></i>Borrar</button></td>
     </div>
 </div>
