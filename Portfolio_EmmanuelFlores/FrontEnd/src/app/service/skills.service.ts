@@ -8,7 +8,7 @@ import { Skills } from '../model/skills';
   providedIn: 'root'
 })
 export class SkillsService {
-  sURL = environment.URL + 'skills/';
+  sURL = 'https://backendeflores.herokuapp.com/skills/';
 
   constructor(private httpClient: HttpClient) { }
 
