@@ -1,33 +1,21 @@
-package com.portfolio.eflores.entity;
+package com.portfolio.eflores.Dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 
-@Entity
-public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    
-    @NotNull
+public class PersonaDto {
+    @NotBlank
     private String nombre;
-    
-    @NotNull
+    @NotBlank
     private String apellido;
-    
     private String descripcionPers;
-    
     private String img;
-
-    //Constructores
     
-    public Persona() {
+    //Constructores
+
+    public PersonaDto() {
     }
 
-    public Persona(String nombre, String apellido, String descripcionPers, String img) {
+    public PersonaDto(String nombre, String apellido, String descripcionPers, String img) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.descripcionPers = descripcionPers;
@@ -35,14 +23,6 @@ public class Persona {
     }
     
     //Getters y Setters
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getNombre() {
         return nombre;
