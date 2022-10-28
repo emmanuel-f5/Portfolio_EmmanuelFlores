@@ -1,7 +1,23 @@
 <div class="row">
-    <h1>Proyectos realizados</h1>
-    <div class=" col-sm-12 col-md-12 col-lg-12 proyecto">
-        <h2>Portfolio</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, necessitatibus labore? Minima animi tenetur delectus quo hic nobis eos repudiandae fugiat asperiores repellat. Asperiores quisquam enim ducimus, totam pariatur facilis!</p>
+    <h1>Proyectos</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevoproy" *ngIf="isLogged">
+            Nuevo Proyecto
+        </button>
     </div>
+
+    <div class="col-lg-1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Proyectos of proyectos">
+                    <td><h2>{{Proyectos.nombreProy}}</h2></td>
+                    <td>{{Proyectos.descripcionProy}}</td>
+                    <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editproy/{{Proyectos.id}}"><i class="bi bi-pencil"></i>Editar</button></td>
+                    <td *ngIf="isLogged"><button class="btn btn-danger" (clic)="delete(Proyectos.id)"><i class="bi bi-trash"></i>Borrar</button></td>
+                </tr>
+            </tbody>
+    
+        </table>
+    </div>    
 </div>
