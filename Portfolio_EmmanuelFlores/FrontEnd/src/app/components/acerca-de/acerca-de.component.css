@@ -7,8 +7,13 @@
     border-radius: 100%;
 }
 
+.pre {
+    text-align: center;
+}
+
 @media(max-width: 575px) {
     #fotodeperfil {
         width: 25%;
+        text-align: center;
     }
 }

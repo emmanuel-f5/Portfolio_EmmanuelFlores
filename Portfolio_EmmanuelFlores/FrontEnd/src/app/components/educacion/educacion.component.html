@@ -5,19 +5,17 @@
             Nueva Educación
         </button>
     </div>
-
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let Educacion of educacion">
-                    <td><h2>{{Educacion.nombreEdu}}</h2></td>
-                    <td>{{Educacion.descripcionEdu}}</td>
-                    <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}"><i class="bi bi-pencil"></i>Editar</button></td>
-                    <td *ngIf="isLogged"><button class="btn btn-danger" (clic)="delete(Educacion.id)"><i class="bi bi-trash"></i>Borrar</button></td>
-                </tr>
-            </tbody>
-    
-        </table>
-    </div>    
+</div>
+<div class="container-fluid">
+    <div class="row" *ngFor="let Educacion of educacion">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-xs-11 col-sm-3 col-md-3 col-lg-3">
+            <h2>{{Educacion.nombreEdu}}</h2>
+        </div>
+        <div class="col-xs-10 col-sm-6 col-md-6 col-lg-6">{{Educacion.descripcionEdu}}</div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" *ngIf="isLogged"><button class="btn btn-light"
+            routerLink="/editedu/{{Educacion.id}}"><i class="bi bi-pencil"></i></button></div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" *ngIf="isLogged"><button class="btn btn-danger"
+            (clic)="delete(Educacion.id)"><i class="bi bi-trash"></i></button></div>
+    </div>
 </div>

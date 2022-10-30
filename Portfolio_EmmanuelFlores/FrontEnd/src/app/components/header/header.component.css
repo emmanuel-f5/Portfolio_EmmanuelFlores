@@ -1,5 +1,6 @@
 div{
     background: linear-gradient(90deg, #3282d3, #a4cad5);
+    scrollbar-gutter: auto;
 } 
 
 app-contacto {

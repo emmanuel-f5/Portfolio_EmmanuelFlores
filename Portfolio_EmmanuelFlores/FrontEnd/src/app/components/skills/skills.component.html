@@ -4,24 +4,26 @@
     <div class="col-lg-2">
         <button type="button" routerLink="/nuevaskills" class="btn btn-dark" *ngIf="isLogged"> Nueva Skill</button>
     </div>
-
-    <div class="text-center col-sm-3 col-md-3 col-lg-3" *ngFor="let skills of skills">
-        <circle-progress
-            [percent]="(skills.porcentaje)"
-            [radius]="100"
-            [showUnits]="false"
-            [title]="(skills.nombreS)"
-            [showTitle]="true"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'"
-            [animation]="true"
-            [animationDuration]="400">
-        </circle-progress>
-
-        <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editskills/{{skills.id}}"><i class="bi bi-pencil"></i>Editar</button></td>
-        <td *ngIf="isLogged"><button class="btn btn-danger" (clic)="delete(skills.id)"><i class="bi bi-trash"></i>Borrar</button></td>
+</div>
+<div class="container-fluid">
+    <div class="row" *ngFor="let skills of skills">
+        <div class="text-center col-sm-3 col-md-3 col-lg-3">
+            <circle-progress
+                [percent]="(skills.porcentaje)"
+                [radius]="100"
+                [showUnits]="false"
+                [title]="(skills.nombreS)"
+                [showTitle]="true"
+                [showSubtitle]="false"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#78C000'"
+                [innerStrokeColor]="'#C7E596'"
+                [animation]="true"
+                [animationDuration]="400">
+            </circle-progress>
+        </div>
+        <div *ngIf="isLogged"><button class="btn btn-light" routerLink="/editskills/{{skills.id}}"><i class="bi bi-pencil"></i></button></div>
+        <div *ngIf="isLogged"><button class="btn btn-danger" (clic)="delete(skills.id)"><i class="bi bi-trash"></i></button></div>
     </div>
 </div>

@@ -1,19 +1,22 @@
-<div class="conatiner" *ngIf="educacion">
-    <div class="row">
-        <div>
+<section>
+    <div class="conatiner" *ngIf="educacion">
+        <div class="row form-control">
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombreEdu">Nombre de la institución educativa</label>
-                    <input type="text" class="form-control" id="nombreEdu" name="nombreEdu" [(ngModel)]="educacion.nombreEdu" required>
+                    <input type="text" class="form-control" id="nombreEdu" name="nombreEdu"
+                        [(ngModel)]="educacion.nombreEdu" required>
                 </div>
                 <div class="form-group">
                     <label for="descripcionEdu">Descripción</label>
-                    <input type="text" class="form-control" id="descripcionEdu" name="descripcionEdu" [(ngModel)]="educacion.descripcionEdu" required>
+                    <input type="text" class="form-control" id="descripcionEdu" name="descripcionEdu"
+                        [(ngModel)]="educacion.descripcionEdu" required>
                 </div>
+                <br>
                 <button class="btn btn-primary">
                     Editar Educación
                 </button>
             </form>
         </div>
     </div>
-</div>
+</section>
