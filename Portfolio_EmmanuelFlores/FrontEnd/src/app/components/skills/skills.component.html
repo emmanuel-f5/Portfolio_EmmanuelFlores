@@ -6,8 +6,8 @@
     </div>
 </div>
 <div class="container-fluid">
-    <div class="row" *ngFor="let skills of skills">
-        <div class="text-center col-sm-3 col-md-3 col-lg-3">
+    <div class="row" >
+        <div class="text-center col-sm-3 col-md-3 col-lg-3" *ngFor="let skills of skills">
             <circle-progress
                 [percent]="(skills.porcentaje)"
                 [radius]="100"
@@ -17,13 +17,13 @@
                 [showSubtitle]="false"
                 [outerStrokeWidth]="16"
                 [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#78C000'"
-                [innerStrokeColor]="'#C7E596'"
+                [outerStrokeColor]="'#f75705'"
+                [innerStrokeColor]="'#fb8f58'"
                 [animation]="true"
-                [animationDuration]="400">
+                [animationDuration]="800">
             </circle-progress>
+            <div *ngIf="isLogged"><button class="btn btn-light" routerLink="/editskills/{{skills.id}}"><i class="bi bi-pencil"></i></button></div>
+            <div *ngIf="isLogged"><button class="btn btn-danger" (clic)="delete(skills.id)"><i class="bi bi-trash"></i></button></div>
         </div>
-        <div *ngIf="isLogged"><button class="btn btn-light" routerLink="/editskills/{{skills.id}}"><i class="bi bi-pencil"></i></button></div>
-        <div *ngIf="isLogged"><button class="btn btn-danger" (clic)="delete(skills.id)"><i class="bi bi-trash"></i></button></div>
     </div>
 </div>

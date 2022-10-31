@@ -30,11 +30,11 @@ export class ExperienciaComponent implements OnInit {
   }
 
   delete(id?: number) {
-    if(id != undefined) {
-      this.experienciaService.delete(id).subscribe(
-        data => {
+    if(confirm('¿Está seguro que desea eliminar el registro?')) {
+      this.experienciaService.delete(id).subscribe((
+        data) => {
           this.cargarExperiencia();
-        }, err => {
+        },(error) => {
           alert("No se pudo borrar la experiencia");
         }
       )

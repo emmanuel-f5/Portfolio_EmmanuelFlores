@@ -7,6 +7,7 @@ public class PersonaDto {
     private String nombre;
     @NotBlank
     private String apellido;
+    private String titulo;
     private String descripcionPers;
     private String img;
     
@@ -15,9 +16,10 @@ public class PersonaDto {
     public PersonaDto() {
     }
 
-    public PersonaDto(String nombre, String apellido, String descripcionPers, String img) {
+    public PersonaDto(String nombre, String apellido, String titulo, String descripcionPers, String img) {
         this.nombre = nombre;
         this.apellido = apellido;
+        this.titulo = titulo;
         this.descripcionPers = descripcionPers;
         this.img = img;
     }
@@ -40,6 +42,14 @@ public class PersonaDto {
         this.apellido = apellido;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+        
     public String getDescripcionPers() {
         return descripcionPers;
     }

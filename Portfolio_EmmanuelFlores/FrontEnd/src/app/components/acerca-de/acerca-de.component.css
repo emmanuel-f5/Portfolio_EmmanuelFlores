@@ -11,6 +11,10 @@
     text-align: center;
 }
 
+.imgcent {
+    text-align: center;
+}
+
 @media(max-width: 575px) {
     #fotodeperfil {
         width: 25%;
