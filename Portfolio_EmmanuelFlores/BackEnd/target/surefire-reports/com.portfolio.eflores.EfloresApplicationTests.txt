@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.portfolio.eflores.EfloresApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 48.89 s - in com.portfolio.eflores.EfloresApplicationTests
